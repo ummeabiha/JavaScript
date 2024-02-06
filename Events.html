@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <style>
+    .dark {
+      background-color: black;
+      color: white;
+    }
+    .white {
+      background-color: white;
+      color: black;
+    }
+  </style>
+  <body>
+    <button id="btn1">BTN 1</button>
+
+    <!-- INLINE EVENT HANDLING -->
+    <button onclick="console.log('Btn was clicked');">Click Me</button>
+    <button ondblclick="console.log('Btn was clicked Twice');alert('hello')">
+      Click Me Twice
+    </button>
+
+    <div
+      style="background-color: dodgerblue; width: 200px; height: 100px"
+      onmouseover="console.log('You are inside div')"
+    >
+      This is a box!;
+    </div>
+
+    <!-- MODE SWITCH BUTTON -->
+    <button id="mode">Mode</button>
+    <p>This is a Paragraph</p>
+  </body>
+  <script src="Events.js"></script>
+</html>
