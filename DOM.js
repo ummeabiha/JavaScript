@@ -1,4 +1,4 @@
-// WHY SHOULD WE WRITE JS IN SEPARATE FILE?
+// WHY SHOULD WE WRITE JS IN SEPARATE FILE??
 // improve readibility
 // improve modularity
 // helps in browser caching
