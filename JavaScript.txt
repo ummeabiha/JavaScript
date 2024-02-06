@@ -1,0 +1,107 @@
+script tag must be loaded in last, as it won't recognize the body tag, if defined earlier than it.
+*************************************************************************
+
+Javascript is a dynamically types language. We do not have to tell the datatype of a variable.
+for e.g. if we are working in python while initializing the variable we have to define its datatype. Whereas, in JS there is no such thing.
+
+e.g. fullName= "Abiha"
+fullName= 25
+console.log(fullName)
+output---> 25 (dynamic nature allows string and int to be stores in a single variable)
+
+LET, CONST AND VAR:
+var: variable can be re declared & updated. A global scope variable. (not recommended)(creates confusion and errors, as it allows 
+redefining the variable which is not a recommended way such as: var age= 29; var age= 58;)
+
+let: variable can not be re declared but can be updated. A block scope variable. (e.g. let age= 29, age= 18) (value is updated in the
+same variable but the variable is not declared again)
+
+const: variable can not be re declared or updated. A block scope variable.
+
+*************************************************************************
+DATATYPES (TWO TYPES)
+
+PRIMITIVE (7)
+number
+float
+string
+boolean
+null  //object (absence of an object)
+BigInt
+Symbol
+
+NON- PRIMITIVE (OBJECTS)
+Arrays
+Functions
+
+
+HOW ARE WE ABLE TO MODIFY NAME or AGE OF Students when the object is declared as const????????
+Since Student is an obj we can change the values for its keys, as  for displaying error here compiler 
+needs to reference the memory address. 
+That is why we are able to change the values of const objects, but not const variables.
+
+*************************************************************************
+LOOPS & STRINGS
+
+TEMPLATE LITERALS 
+just a string with back ticks. Helps in string interpolation. 
+used to evaluate and embed expressions dynamically in template literals. 
+const name = 'John Doe'; const age = 20; // Using template literals for string interpolation 
+console. log(`My name is ${name} and I'm ${age} years old.
+*************************************************************************
+ARRAYS
+
+
+
+DIFF BTW FOREACH() AND MAP
+FOREACH---> doesnot return an array
+MAP---> returns an array
+
+FOREACH
+let arr = [1, 2, 3];
+arr.forEach((val) => {
+  console.log(val + 1);
+});
+
+MAP
+let output = arr.map((val) => val + 1);
+console.log(output);
+*************************************************************************
+FUNCTIONS AND METHODS
+
+DIFFERENCE
+Functions are not defined for specific datatype and are generalized. Whereas,
+methods are datatype specific. for e.g. toUpperCase() is a method which will only operate on string datatype.
+
+*************************************************************************
+WHY SHOULD WE WRITE JS IN SEPARATE FILE?
+improve readibility
+improve modularity 
+helps in browser caching
+
+WINDOW OBJECT
+represents an open window in a browser.
+global object that contains methods and properties.
+automatically created by browser.
+browser object (not JS object)
+all code renders in window object.
+
+DOCUMENT OBJECT MODEL
+-when web page is loaded, the browser creates a DOM of the page.
+-to access the HTML elements in JS
+-the HTML elements are converted to objects in JS which are called as document avaible in out window object. window.document
+
+window--> document (model of HTML code) ---> DOM ---> tree like structure --> individual elements boxes are called nodes (objects)
+
+*************************************************************************
+EVENTS
+The change in state of an object is called event.
+Events are fired to notify code of interesting changes that may impact code execution.
+
+INLINE EVENT HANDLING
+HTML ky through events define krna
+
+if we have handeled events using inline and JS methods both. The priority will be given to the JS Event Handling.
+
+*************************************************************************
+CLASSES AND OBJECTS
