@@ -78,3 +78,46 @@ console.log(divEle.innerHTML);
 
 // 4- TEXT CONTENT (returns text content even for hidden elements)
 console.log(divEle.textContent);
+
+//************************************************************** */
+//**************ATTRIBUTES OF DOM ELEMENTS***************/
+console.log(divEle.getAttribute("id"));
+
+let p = document.querySelector("p");
+console.log(p.getAttribute("class"));
+
+//CHANGE ATTRIBUTE
+p.setAttribute("class", "newClass");
+console.log(p.getAttribute("class"));
+
+//STYLE
+console.log(divEle.style);
+divEle.style.backgroundColor = "blue";
+divEle.style.color = "white";
+
+//************************************************************** */
+//**************INSERT ELEMENTS***************/
+let newBtn = document.createElement("button");
+newBtn.innerText = "Click Me!";
+console.log(newBtn);
+
+//1- Append (adds at the end of the node (inside))
+divEle.append(newBtn);
+
+//2- Prepend(adds at the start of the node (inside))
+divEle.prepend(newBtn);
+
+//3- Before (adds before the node (outside))
+let heading = document.createElement("h1");
+heading.innerHTML = "<i>I am a Heading</i>";
+divEle.before(heading);
+
+//4- Append (adds after the node (outside))
+divEle.after(newBtn);
+
+//DELETE NODE
+heading.remove();
+
+// append() is used to add HTML content or an element to the end of an existing element while appendChild() is used to add a new node element as a child to an existing node.
+
+// the remove method removes a selected element and its child elements. The removeChild method removes a selected child element from a specified parent element.
