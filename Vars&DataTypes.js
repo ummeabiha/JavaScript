@@ -19,8 +19,8 @@ age = 19; //number
 
 salary = 50.56; //float
 
-x = null; //object
-typeof x; //object
+// x = null; //object
+// typeof x; //object
 
 isFollow = false; //boolean
 
