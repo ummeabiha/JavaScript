@@ -1,3 +1,62 @@
+//Closure is a function with its lexical environment
+
+msg= "Hello, world!";
+
+function Hello(){
+  let msg= "Good Morning"; // local variable created by Hello() 
+  console.log(msg);
+
+  // Hello2() is the inner function i.e. closure 
+  let greet= function Hello2(){
+    // uses the variable declared in parent function
+    console.log("Hello2", msg); // references to the msg variable
+  }
+  return greet;
+}
+
+let greet= Hello();
+greet();
+
+
+// The closure function returns a referenced value, not the hard coded value. Henoce, on changing the value of a variable even after the execution of the closure, it will return the new value
+function displayName(){
+  var studentname= "Abiha";
+  function studentName(){
+    console.log(studentname); // this will print Sara 
+  }
+  studentname= "Sara";
+  return studentName;
+}
+
+let studentname= displayName();
+studentname(); 
+
+//Nested Closures
+function returnFunc() {
+  const x = () => {
+    let a = 1;
+    console.log(a);
+    const y = () => {
+      // let a = 2
+      console.log(a);
+      const z = () => {
+        // let a = 3
+        console.log(a);
+      };
+      z(); //999
+    };
+    a = 999;
+    y(); //999
+  };
+  return x;
+}
+
+let a = returnFunc();
+a();
+
+
+// *****************************************************************************************/
+
 // OUTPUT: 5 5 5 5
 for (var i = 1; i <= 4; i++) {
   setTimeout(function () {
