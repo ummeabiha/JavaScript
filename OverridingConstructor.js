@@ -20,7 +20,7 @@ class Programmer extends Employee {
   constructor(name) {
     // this.name; // it will give error, as this must be written after super constructor.
     super(name); // must utilize this constructor
-    console.log(`This is a newly written constructor`);
+    console.log(`This is a newly written constructor.`);
   }
   // constructor(...args){ ---> If there is no constructor in the child class, this is created automatically
   //   super(...args)

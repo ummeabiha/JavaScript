@@ -1,6 +1,6 @@
 class Employee {
   constructor(name) {
-    console.log(`${name} - Employee's constructor is here`);
+    console.log(`${name} - Employee's constructor is here.`);
     this.name = name;
   }
   login() {
