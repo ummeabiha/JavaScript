@@ -1,3 +1,7 @@
+/*
+Destructuring is used to unpack values from an array, or properties from objects, into distinct variables.
+*/
+
 let arr = [3, 5, 8, 9, 12, 14];
 // No need to do this:
 // let a = arr[0]
@@ -26,7 +30,7 @@ let obj2 = {
   address: "XYZ",
 };
 
-// console.log({ ...obj2, name: "John", company: "ABC" })
+// console.log({ ...obj2, name: "John", company: "ABC" }) // this will overwrite the values
 console.log({ name: "John", company: "ABC", ...obj2 }); // This will print the obj2 object without changing any values
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
