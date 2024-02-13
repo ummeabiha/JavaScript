@@ -79,20 +79,24 @@ improve readibility
 improve modularity 
 helps in browser caching
 
-WINDOW OBJECT
+==> WINDOW OBJECT
 represents an open window in a browser.
 global object that contains methods and properties.
 automatically created by browser.
 browser object (not JS object)
 all code renders in window object.
 
-DOCUMENT OBJECT MODEL
+==> DOCUMENT OBJECT MODEL
+-poory html page ko JS object bna ky document ka part bnana is DOM.
 -when web page is loaded, the browser creates a DOM of the page.
 -to access the HTML elements in JS
 -the HTML elements are converted to objects in JS which are called as document avaible in out window object. window.document
 
 window--> document (model of HTML code) ---> DOM ---> tree like structure --> individual elements boxes are called nodes (objects)
 
+==> BROWSER OBJECT MODEL
+- It provides additional objects provided by hosted environment (such as: browser)
+- Function like alert, prompt are a part of BOM.
 *************************************************************************
 EVENTS
 The change in state of an object is called event.
