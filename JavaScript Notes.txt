@@ -1,6 +1,41 @@
 script tag must be loaded in last, as it won't recognize the body tag, if defined earlier than it.
 *************************************************************************
+==> WHAT IS JAVASCRIPT???
+- It is a single-threaded language. (can do one task at a time)
 
+- It is a non-blocking language (doesnot make other operations wait, if one operation is taking time for execution such as in setTimeout).
+
+- It is a asynchronous concurrent language (can see non- blocking behaviour of JS).
+
+- JS runtime can do only one operation at a time. (Browser, APIs are not a part of runtime hence we are able to perform multiple operations with the assistance of APIs and browser support)
+
+- It has a call stack, event loop, and a callback queue+ other APIs.
+
+- V8 is JS runtime which has call stack and a heap.
+
+- The heap is used for memory allocation and stack holds the execution context.
+
+- DOM, setTimeout XML Http Request doesnot exist in V8 source code. 
+
+- Task Queue --> As JS can execute one task at a time, the rest tasks are queued waiting to be executed.
+
+- Call Stack --> the order in which operations are executed. All the operations to be executed are stored in a stack, and follows the stack behaviour for e.g.
+
+greeting=()=>{
+  hello=()=>{
+
+  }
+}
+stack order--> greeting(), hello();
+hello() will be executed first and leaves the stack, then greeting() will starts to execute.
+
+- Event Loop --> 
+JS has a runtime model based on event loops, which is responsible for the execution of code, collecting and processing events, and executing sub-tasks.
+pushes the operations from task queue to the call stack.
+
+setTimeout (fun, 0) --> when set timeout is run with 0 parameter, it means that the task should be delayed until other tasks are completed. 
+
+*************************************************************************
 Javascript is a dynamically types language. We do not have to tell the datatype of a variable.
 for e.g. if we are working in python while initializing the variable we have to define its datatype. Whereas, in JS there is no such thing.
 
